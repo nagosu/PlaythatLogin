@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 635px;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  width: 100%;
+  height: 100%;
+  padding: 60px 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+}
+
+.logo-image {
+  width: 130px;
+}
+
+.logo-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+  margin-top: 6px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 65px 30px;
+  border: 1px solid #111;
+  border-radius: 6px;
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 42px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 50px;
+}
+
+.input-phone-number {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: #333;
+}
+
+.input-title {
+  position: absolute;
+  font-size: 10px;
+  top: 0;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.login-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-button {
+  width: 100%;
+  height: 42px;
+  background-color: #111;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s, box-shadow 0.2s;
+}
+
+.login-button:hover:enabled {
+  opacity: 0.8;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 280px;
+  height: 130px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fade-in-down 0.3s forwards;
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* 위에서 아래로 */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90px;
+  padding: 0 20px;
+}
+
+.modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+#modal-close-button {
+  width: 100%;
+  height: 40px;
+  background-color: #7749f8;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#modal-close-button:hover {
+  background-color: #5227cc; /* 호버 시 배경색 */
+}

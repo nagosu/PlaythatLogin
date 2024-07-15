@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../static/chatbot_v1_pt/css/login.css" />
+    <title>식물비서 싱고</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="logo-container">
+          <img
+            src="../../static/chatbot_v1_pt/images/common/img-chat-top.png"
+            alt="로고"
+            class="logo-image"
+          />
+          <span class="logo-title">식물비서 싱고</span>
+        </div>
+        <div class="login-container">
+          <h1 class="login-title">LOGIN</h1>
+          <div class="input-container">
+            <input
+              type="text"
+              placeholder="ex. 010-1234-5678"
+              id="phone-number"
+              class="input-phone-number"
+            />
+            <span class="input-title">휴대폰 번호 입력</span>
+          </div>
+          <a
+            href="./index.html"
+            id="login-button"
+            class="login-button-container"
+          >
+            <button class="login-button">시작하기</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- 입력창 경고 모달 -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-title-container">
+            <span class="modal-title">휴대폰 번호를 모두 입력해주세요.</span>
+          </div>
+          <button id="modal-close-button">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 스크립트 -->
+    <script src="../../static/chatbot_v1_pt/js/login.js"></script>
+  </body>
+</html>
