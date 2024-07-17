@@ -3,7 +3,7 @@ document
   .getElementById("login-button")
   .addEventListener("click", function (event) {
     const phoneNumber = document.getElementById("phone-number").value;
-    const phonePattern = /^010-\d{4}-\d{4}$/;
+    const phonePattern = /^010\d{8}$/; // 정규 표현식을 01012345678 형식으로 설정
 
     if (!phoneNumber || !phonePattern.test(phoneNumber)) {
       event.preventDefault();
@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
   loginButton.disabled = true;
 });
 
-// 입력창에 숫자와 "-"만 입력 가능하게 필터링
+// 입력창에 숫자만 입력 가능하게 필터링
 document
   .getElementById("phone-number")
   .addEventListener("input", function (event) {
     const input = event.target;
-    const filteredValue = input.value.replace(/[^0-9-]/g, ""); // 숫자와 "-"를 제외한 문자 제거
+    const filteredValue = input.value.replace(/[^0-9]/g, ""); // 숫자 외 문자 제거
     input.value = filteredValue;
   });
